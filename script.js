@@ -98,25 +98,32 @@ const showPokemon = (data) => {
     const formatId = String(id).padStart(4, "0");
 
     const pokemonSprite = showSprite(name, front_default);
-    imageOutput.innerHTML = `${pokemonSprite}`;
-    imageOutput.classList.add("image");
+    imageOutput.innerHTML = `${pokemonSprite}
+        <div id="total-data">
+            <span>${pokemonType}</span>
+            <span><b>#${formatId}</b></span><hr>
+            <span><b>${newName}</b></span><hr>
+            <span><b>Weight:</b> ${weight}</span><hr>
+            <span><b>Height:</b> ${height}</span>
+        </div>
+    `;
 
     output.style.opacity = 1;
 
     pokemonStats.innerHTML = `
     <tr>
-        <td id="pokemon-id">${formatId}</td>
-        <td id="pokemon-name">${newName}</td>
-        <td id="weight">${weight}</td>
-        <td id="height">${height}</td>
-        <td id="types">${pokemonType}</td>
-        <td id="total"><b>${total}</b></td>
-        <td id="hp">${hp}</td>
-        <td id="attack">${attack}</td>
-        <td id="defense">${defense}</td>
-        <td id="special-attack">${spAtk}</td>
-        <td id="special-defense">${spDef}</td>
-        <td id="speed">${speed}</td>
+        <td data-label="#" id="pokemon-id">${formatId}</td>
+        <td data-label="Name" id="pokemon-name">${newName}</td>
+        <td data-label="Weight" id="weight">${weight}</td>
+        <td data-label="Height" id="height">${height}</td>
+        <td data-label="Types" id="types">${pokemonType}</td>
+        <td data-label="Total" id="total"><b>${total}</b></td>
+        <td data-label="HP" id="hp">${hp}</td>
+        <td data-label="Attack" id="attack">${attack}</td>
+        <td data-label="Defense" id="defense">${defense}</td>
+        <td data-label="Sp. Atk" id="special-attack">${spAtk}</td>
+        <td data-label="Sp. Def" id="special-defense">${spDef}</td>
+        <td data-label="Speed" id="speed">${speed}</td>
     </tr>
     `;
 };
