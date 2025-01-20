@@ -377,7 +377,7 @@ footer p {
 
     #output {
         width: 300px;
-        min-height: 250px;
+        min-height: 400px;
         display: flex;
         flex-direction: row;
         justify-content: center;

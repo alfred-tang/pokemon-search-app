@@ -22,6 +22,7 @@ const formatName = (name) => {
         "Kommo-o": "kommo-o",
         "Wo-Chien": "wo-chien",
         "Chien-Pao": "chien-pao",
+        "Type: Null": "type-null",
         "Ting-Lu": "ting-lu",
         "Chi-Yu": "chi-yu",
     };
